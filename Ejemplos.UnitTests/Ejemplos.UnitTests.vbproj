@@ -98,6 +98,7 @@
     <Compile Include="4 Retornan una estructura de datos\Creacion de un nuevo proyecto\GenereUnNuevoProyectoTests.vb" />
     <Compile Include="4 Retornan una estructura de datos\Genere la valoración de una emisión en colones\GenereLaValoracionTests.vb" />
     <Compile Include="4 Retornan una estructura de datos\Genere las métricas de una iteración\GenereLasMetricasDeLaIteracionTests.vb" />
+    <Compile Include="5 Retornan una lista de estructuras de datos\Genere las métricas de todas las iteraciones del proyecto\GenereLasMetricasDeLasIteracionesTests.vb" />
     <Compile Include="JsonAssert.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -142,7 +143,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="5 Retornan una lista de estructuras de datos\" />
+    <Folder Include="5 Retornan una lista de estructuras de datos\Genere la valoración de las emisiones en colones\" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

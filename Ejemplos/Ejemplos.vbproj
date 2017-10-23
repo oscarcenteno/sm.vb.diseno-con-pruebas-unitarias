@@ -82,6 +82,8 @@
     <Compile Include="4 Retornan una estructura de datos\Genere la valoración de una emisión en colones\Valoracion.vb" />
     <Compile Include="4 Retornan una estructura de datos\Genere las métricas de una iteración\GeneracionDeMetricasDeIteracion.vb" />
     <Compile Include="4 Retornan una estructura de datos\Genere las métricas de una iteración\MetricasDeIteracion.vb" />
+    <Compile Include="5 Retornan una lista de estructuras de datos\Genere las métricas de todas las iteraciones del proyecto\GeneracionDeMetricasDeLasIteraciones.vb" />
+    <Compile Include="5 Retornan una lista de estructuras de datos\Genere la valoración de las emisiones en colones\GeneracionDeLaValoracionDeLasEmisionesEnColones.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -117,9 +119,7 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="5 Retornan una lista de estructuras de datos\1 Cuadro de resumen de un proyecto\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
