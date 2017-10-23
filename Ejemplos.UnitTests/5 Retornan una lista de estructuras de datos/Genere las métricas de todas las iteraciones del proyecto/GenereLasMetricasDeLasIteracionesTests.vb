@@ -1,5 +1,4 @@
 ﻿<TestClass()> Public Class GenereLasMetricasDeLasIteracionesTests
-
     Dim iteraciones As List(Of Iteracion)
     Dim esperado As List(Of MetricasDeIteracion)
     Dim obtenido As List(Of MetricasDeIteracion)
