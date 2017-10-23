@@ -68,17 +68,20 @@
     <Compile Include="1 Retornan un escalar\Cálculo del aporte de garantia\CalculoDelAporteDeGarantia.vb" />
     <Compile Include="1 Retornan un escalar\Cálculo del valor de mercado\CalculoDelValorDeMercado.vb" />
     <Compile Include="1 Retornan un escalar\Genere la métrica de tiempo no efectivo\GeneracionDelTiempoNoEfectivo.vb" />
-    <Compile Include="1 Retornan un escalar\Genere la métrica de velocidad\CalculoDeVelocidad.vb" />
-    <Compile Include="1 Retornan un escalar\Genere la métrica de velocidad\Historia.vb" />
     <Compile Include="1 Retornan un escalar\Modifique la métrica de puntos\CalculoDeLaMetricaDePuntosModificada.vb" />
     <Compile Include="2 De validacion\Valide los datos de una iteración\RangoDeFechas.vb" />
     <Compile Include="2 De validacion\Valide los datos de una iteración\ValidacionDeIteracion.vb" />
     <Compile Include="2 De validacion\Valide las estadisticas de una iteracion\ValidacionDeEstadisticas.vb" />
     <Compile Include="3 Retornan una lista de escalares\Genere la lista de métricas de puntos\GeneracionDeLaListaDeMetricasDePuntos.vb" />
     <Compile Include="1 Retornan un escalar\Genere la métrica de puntos\Iteracion.vb" />
-    <Compile Include="3 Retornan una lista de escalares\Genere la lista de métricas de velocidad\GeneracionDeLaListaDeMetricasDeVelocidad.vb" />
     <Compile Include="4 Retornan una estructura de datos\Creacion de un nuevo proyecto\CreacionDeUnNuevoProyecto.vb" />
     <Compile Include="4 Retornan una estructura de datos\Creacion de un nuevo proyecto\NuevoProyecto.vb" />
+    <Compile Include="4 Retornan una estructura de datos\Genere la valoración de una emisión en colones\Emision.vb" />
+    <Compile Include="4 Retornan una estructura de datos\Genere la valoración de una emisión en colones\GeneracionDeLaValoracionDeUnaEmisionEnColones.vb" />
+    <Compile Include="4 Retornan una estructura de datos\Genere la valoración de una emisión en colones\InformacionOficial.vb" />
+    <Compile Include="4 Retornan una estructura de datos\Genere la valoración de una emisión en colones\Valoracion.vb" />
+    <Compile Include="4 Retornan una estructura de datos\Genere las métricas de una iteración\GeneracionDeMetricasDeIteracion.vb" />
+    <Compile Include="4 Retornan una estructura de datos\Genere las métricas de una iteración\MetricasDeIteracion.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -115,8 +118,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="4 Retornan una estructura de datos\Genere el resumen de las métricas de una iteración\" />
-    <Folder Include="4 Retornan una estructura de datos\Genere la valoración de una emisión en colones\" />
     <Folder Include="5 Retornan una lista de estructuras de datos\1 Cuadro de resumen de un proyecto\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

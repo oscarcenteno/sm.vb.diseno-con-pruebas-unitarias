@@ -2,8 +2,10 @@
     Public Shared Function CalculeLaMetricaDePuntos(iteracion As Iteracion) As String
         If iteracion.HayInformacionDePuntosDisponible Then
             If iteracion.PuntosPlanificados > 0 Then
-                Dim metricaRedondeadaConDosDecimales As Decimal = Decimal.Round(iteracion.PuntosTerminados / iteracion.PuntosPlanificados, 2) * 100
-                Dim metricaSinDecimales As Integer = Decimal.Truncate(metricaRedondeadaConDosDecimales)
+                Dim metrica As Decimal = iteracion.PuntosTerminados / iteracion.PuntosPlanificados
+                Dim metricaRedondeadaConDosDecimales As Decimal = Decimal.Round(metrica, 2)
+                Dim metricaEnPorcentaje As Decimal = metricaRedondeadaConDosDecimales * 100
+                Dim metricaSinDecimales As Integer = Decimal.Truncate(metricaEnPorcentaje)
 
                 Return $"{metricaSinDecimales}%"
             Else

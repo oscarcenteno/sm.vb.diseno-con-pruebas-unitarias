@@ -91,13 +91,13 @@
     <Compile Include="1 Retornan un escalar\Cálculo del porcentaje de cobertura revisado\CalculeElPorcentajeDeCoberturaRevisadoTests.vb" />
     <Compile Include="1 Retornan un escalar\Cálculo del valor de mercado\CalculeElValorDeMercadoTests.vb" />
     <Compile Include="1 Retornan un escalar\Genere la métrica de tiempo no efectivo\GenereElTiempoNoEfectivoTests.vb" />
-    <Compile Include="1 Retornan un escalar\Genere la métrica de velocidad\CalculeLaVelocidadTests.vb" />
     <Compile Include="1 Retornan un escalar\Modifique la métrica de puntos\CalculeLaMetricaDePuntosModificadaTests.vb" />
     <Compile Include="2 De validacion\Valide las estadisticas de una iteracion\ValideEstadisticasTests.vb" />
     <Compile Include="2 De validacion\Valide los datos de una iteración\ValideLaIteracionTests.vb" />
     <Compile Include="3 Retornan una lista de escalares\Genere la lista de métricas de puntos\GenereLaListaDeMetricasDePuntosTests.vb" />
-    <Compile Include="3 Retornan una lista de escalares\Genere la lista de métricas de velocidad\GenereLaListaDeMetricasDeVelocidadTests.vb" />
     <Compile Include="4 Retornan una estructura de datos\Creacion de un nuevo proyecto\GenereUnNuevoProyectoTests.vb" />
+    <Compile Include="4 Retornan una estructura de datos\Genere la valoración de una emisión en colones\GenereLaValoracionTests.vb" />
+    <Compile Include="4 Retornan una estructura de datos\Genere las métricas de una iteración\GenereLasMetricasDeLaIteracionTests.vb" />
     <Compile Include="JsonAssert.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -142,8 +142,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="4 Retornan una estructura de datos\Genere el resumen de las métricas de una iteración\" />
-    <Folder Include="4 Retornan una estructura de datos\Genere la valoración de una emisión en colones\" />
     <Folder Include="5 Retornan una lista de estructuras de datos\" />
   </ItemGroup>
   <Choose>
