@@ -19,20 +19,22 @@
             End If
         End If
 
-        If iteracion.CapacidadDelEquipo < 0 Then
-            Throw New ArgumentException("Capacidad del equipo debe ser un número positivo")
-        End If
+        If iteracion.HayInformacionDeDiasDisponible Then
+            If iteracion.CapacidadDelEquipo < 0 Then
+                Throw New ArgumentException("Capacidad del equipo debe ser un número positivo")
+            End If
 
-        If iteracion.CapacidadDelEquipo > 1000 Then
-            Throw New ArgumentException("Capacidad del equipo tiene un máximo de 1000 días")
-        End If
+            If iteracion.CapacidadDelEquipo > 1000 Then
+                Throw New ArgumentException("Capacidad del equipo tiene un máximo de 1000 días")
+            End If
 
-        If iteracion.TiempoNoEfectivo < 0 Then
-            Throw New ArgumentException("Tiempo no efectivo debe ser un número positivo")
-        End If
+            If iteracion.DiasNoEfectivos < 0 Then
+                Throw New ArgumentException("Días no efectivos debe ser un número positivo")
+            End If
 
-        If iteracion.TiempoNoEfectivo > iteracion.CapacidadDelEquipo Then
-            Throw New ArgumentException("Tiempo no efectivo debe ser igual o menor a la Capacidad del equipo")
+            If iteracion.DiasNoEfectivos > iteracion.CapacidadDelEquipo Then
+                Throw New ArgumentException("Días no efectivos debe ser igual o menor a la Capacidad del equipo")
+            End If
         End If
     End Sub
 End Class

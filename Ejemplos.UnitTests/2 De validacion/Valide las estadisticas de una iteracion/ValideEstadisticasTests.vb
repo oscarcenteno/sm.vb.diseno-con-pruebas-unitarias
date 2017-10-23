@@ -9,8 +9,9 @@ Public Class ValideEstadisticasTests
         iteracion.HayInformacionDePuntosDisponible = True
         iteracion.PuntosPlanificados = 10
         iteracion.PuntosTerminados = 8
+        iteracion.HayInformacionDeDiasDisponible = True
         iteracion.CapacidadDelEquipo = 100
-        iteracion.TiempoNoEfectivo = 20
+        iteracion.DiasNoEfectivos = 20
     End Sub
 
     <TestMethod()>
@@ -83,6 +84,14 @@ Public Class ValideEstadisticasTests
         ValidacionDeEstadisticas.ValideEstadisticas(iteracion)
     End Sub
 
+    <TestMethod()>
+    Public Sub SiNoHayInformacionDeDíasDisponibleNoSeValidan()
+        iteracion.HayInformacionDeDiasDisponible = False
+        iteracion.CapacidadDelEquipo = -1
+        iteracion.DiasNoEfectivos = -1
+        ValidacionDeEstadisticas.ValideEstadisticas(iteracion)
+    End Sub
+
     <TestMethod(), ExpectedException(GetType(ArgumentException))>
     Public Sub CapacidadDelEquipoNoDebenSerNegativa()
         iteracion.CapacidadDelEquipo = -0.01
@@ -93,7 +102,7 @@ Public Class ValideEstadisticasTests
     <TestMethod()>
     Public Sub CapacidadDelEquipoPuedeSerCero()
         iteracion.CapacidadDelEquipo = 0
-        iteracion.TiempoNoEfectivo = 0
+        iteracion.DiasNoEfectivos = 0
 
         ValidacionDeEstadisticas.ValideEstadisticas(iteracion)
     End Sub
@@ -113,29 +122,29 @@ Public Class ValideEstadisticasTests
     End Sub
 
     <TestMethod(), ExpectedException(GetType(ArgumentException))>
-    Public Sub TiempoNoEfectivoNoDebenSerNegativa()
-        iteracion.TiempoNoEfectivo = -0.01
+    Public Sub DiasNoEfectivosNoDebenSerNegativo()
+        iteracion.DiasNoEfectivos = -0.01
 
         ValidacionDeEstadisticas.ValideEstadisticas(iteracion)
     End Sub
 
     <TestMethod()>
-    Public Sub TiempoNoEfectivoPuedeSerCero()
-        iteracion.TiempoNoEfectivo = 0
+    Public Sub DiasNoEfectivosPuedeSerCero()
+        iteracion.DiasNoEfectivos = 0
 
         ValidacionDeEstadisticas.ValideEstadisticas(iteracion)
     End Sub
 
     <TestMethod(), ExpectedException(GetType(ArgumentException))>
-    Public Sub TiempoNoEfectivoNoPuedeSerMayorALaCapacidadDelEquipo()
-        iteracion.TiempoNoEfectivo = 100.01
+    Public Sub DiasNoEfectivosNoPuedeSerMayorALaCapacidadDelEquipo()
+        iteracion.DiasNoEfectivos = 100.01
 
         ValidacionDeEstadisticas.ValideEstadisticas(iteracion)
     End Sub
 
     <TestMethod()>
-    Public Sub TiempoNoEfectivoPuedeSerIgualALaCapacidad()
-        iteracion.TiempoNoEfectivo = 100
+    Public Sub DiasNoEfectivosPuedeSerIgualALaCapacidad()
+        iteracion.DiasNoEfectivos = 100
 
         ValidacionDeEstadisticas.ValideEstadisticas(iteracion)
     End Sub

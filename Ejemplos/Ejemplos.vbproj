@@ -77,6 +77,8 @@
     <Compile Include="3 Retornan una lista de escalares\Genere la lista de métricas de puntos\GeneracionDeLaListaDeMetricasDePuntos.vb" />
     <Compile Include="1 Retornan un escalar\Genere la métrica de puntos\Iteracion.vb" />
     <Compile Include="3 Retornan una lista de escalares\Genere la lista de métricas de velocidad\GeneracionDeLaListaDeMetricasDeVelocidad.vb" />
+    <Compile Include="4 Retornan una estructura de datos\Creacion de un nuevo proyecto\CreacionDeUnNuevoProyecto.vb" />
+    <Compile Include="4 Retornan una estructura de datos\Creacion de un nuevo proyecto\NuevoProyecto.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -113,7 +115,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="4 Retornan una estructura de datos\1 Resumen de métricas de una iteración\" />
+    <Folder Include="4 Retornan una estructura de datos\Genere el resumen de las métricas de una iteración\" />
+    <Folder Include="4 Retornan una estructura de datos\Genere la valoración de una emisión en colones\" />
     <Folder Include="5 Retornan una lista de estructuras de datos\1 Cuadro de resumen de un proyecto\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

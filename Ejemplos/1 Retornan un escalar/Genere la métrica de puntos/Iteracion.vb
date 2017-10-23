@@ -8,5 +8,6 @@
     Public Property HayInformacionDePuntosDisponible As Boolean
 
     Public Property CapacidadDelEquipo As Decimal
-    Public Property TiempoNoEfectivo As Decimal
+    Public Property DiasNoEfectivos As Decimal
+    Public Property HayInformacionDeDiasDisponible As Boolean
 End Class
