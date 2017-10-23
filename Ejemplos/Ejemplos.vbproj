@@ -68,12 +68,15 @@
     <Compile Include="1 Retornan un escalar\Cálculo del aporte de garantia\CalculoDelAporteDeGarantia.vb" />
     <Compile Include="1 Retornan un escalar\Cálculo del valor de mercado\CalculoDelValorDeMercado.vb" />
     <Compile Include="1 Retornan un escalar\Genere la métrica de tiempo no efectivo\GeneracionDelTiempoNoEfectivo.vb" />
+    <Compile Include="1 Retornan un escalar\Genere la métrica de velocidad\CalculoDeVelocidad.vb" />
+    <Compile Include="1 Retornan un escalar\Genere la métrica de velocidad\Historia.vb" />
     <Compile Include="1 Retornan un escalar\Modifique la métrica de puntos\CalculoDeLaMetricaDePuntosModificada.vb" />
     <Compile Include="2 De validacion\Valide los datos de una iteración\RangoDeFechas.vb" />
     <Compile Include="2 De validacion\Valide los datos de una iteración\ValidacionDeIteracion.vb" />
     <Compile Include="2 De validacion\Valide las estadisticas de una iteracion\ValidacionDeEstadisticas.vb" />
-    <Compile Include="3 Retornan una lista de escalares\1 MetricasDePuntos\GeneracionDeLaListaDeMetricasDePuntos.vb" />
-    <Compile Include="3 Retornan una lista de escalares\1 MetricasDePuntos\Iteracion.vb" />
+    <Compile Include="3 Retornan una lista de escalares\Genere la lista de métricas de puntos\GeneracionDeLaListaDeMetricasDePuntos.vb" />
+    <Compile Include="1 Retornan un escalar\Genere la métrica de puntos\Iteracion.vb" />
+    <Compile Include="3 Retornan una lista de escalares\Genere la lista de métricas de velocidad\GeneracionDeLaListaDeMetricasDeVelocidad.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -110,11 +113,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="3 Retornan una lista de escalares\2 Velocidades redondeadas\" />
     <Folder Include="4 Retornan una estructura de datos\1 Resumen de métricas de una iteración\" />
     <Folder Include="5 Retornan una lista de estructuras de datos\1 Cuadro de resumen de un proyecto\" />
-    <Folder Include="6 Obtienen datos de una fuente externa\" />
-    <Folder Include="7 Envían datos a una fuente externa\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

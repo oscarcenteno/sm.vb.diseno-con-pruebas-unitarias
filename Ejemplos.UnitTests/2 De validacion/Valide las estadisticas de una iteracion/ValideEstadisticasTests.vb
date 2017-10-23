@@ -1,134 +1,142 @@
 ﻿<TestClass()>
 Public Class ValideEstadisticasTests
-    Private puntosPlanificados As Decimal
-    Private puntosTerminados As Decimal
-    Private capacidadDelEquipo As Decimal
-    Private tiempoNoEfectivo As Decimal
+    Private iteracion As Iteracion
 
     <TestInitialize>
     Public Sub Inicialice()
         ' Inicialice el escenario valido aquí
-        puntosPlanificados = 10
-        puntosTerminados = 8
-        capacidadDelEquipo = 100
-        tiempoNoEfectivo = 20
+        iteracion = New Iteracion
+        iteracion.HayInformacionDePuntosDisponible = True
+        iteracion.PuntosPlanificados = 10
+        iteracion.PuntosTerminados = 8
+        iteracion.CapacidadDelEquipo = 100
+        iteracion.TiempoNoEfectivo = 20
     End Sub
 
     <TestMethod()>
     Public Sub TodosSonValidos()
-        ValidacionDeEstadisticas.ValideEstadisticas(puntosPlanificados, puntosTerminados, capacidadDelEquipo, tiempoNoEfectivo)
+        ValidacionDeEstadisticas.ValideEstadisticas(Iteracion)
+    End Sub
+
+    <TestMethod()>
+    Public Sub SiNoHayInformacionDePuntosDisponibleNoSeValidan()
+        iteracion.HayInformacionDePuntosDisponible = False
+        iteracion.PuntosPlanificados = -1
+        iteracion.PuntosTerminados = -1
+
+        ValidacionDeEstadisticas.ValideEstadisticas(iteracion)
     End Sub
 
     <TestMethod(), ExpectedException(GetType(ArgumentException))>
     Public Sub PuntosPlanificadosNoDebenSerNegativos()
-        puntosPlanificados = -1
+        iteracion.PuntosPlanificados = -1
 
-        ValidacionDeEstadisticas.ValideEstadisticas(puntosPlanificados, puntosTerminados, capacidadDelEquipo, tiempoNoEfectivo)
+        ValidacionDeEstadisticas.ValideEstadisticas(iteracion)
     End Sub
 
     <TestMethod()>
     Public Sub PuntosPlanificadosPuedenSerCero()
-        puntosPlanificados = 0
+        iteracion.PuntosPlanificados = 0
 
-        ValidacionDeEstadisticas.ValideEstadisticas(puntosPlanificados, puntosTerminados, capacidadDelEquipo, tiempoNoEfectivo)
+        ValidacionDeEstadisticas.ValideEstadisticas(iteracion)
     End Sub
 
     <TestMethod(), ExpectedException(GetType(ArgumentException))>
     Public Sub PuntosPlanificadosTieneUnMaximoDe100Puntos()
-        puntosPlanificados = 101
+        iteracion.PuntosPlanificados = 101
 
-        ValidacionDeEstadisticas.ValideEstadisticas(puntosPlanificados, puntosTerminados, capacidadDelEquipo, tiempoNoEfectivo)
+        ValidacionDeEstadisticas.ValideEstadisticas(iteracion)
     End Sub
 
     <TestMethod()>
     Public Sub PuntosPlanificadosPuedenSerElMáximoPermitido()
-        puntosPlanificados = 100
+        iteracion.PuntosPlanificados = 100
 
-        ValidacionDeEstadisticas.ValideEstadisticas(puntosPlanificados, puntosTerminados, capacidadDelEquipo, tiempoNoEfectivo)
+        ValidacionDeEstadisticas.ValideEstadisticas(iteracion)
     End Sub
 
     <TestMethod(), ExpectedException(GetType(ArgumentException))>
     Public Sub PuntosTerminadosNoDebenSerNegativos()
-        puntosTerminados = -1
+        iteracion.PuntosTerminados = -1
 
-        ValidacionDeEstadisticas.ValideEstadisticas(puntosPlanificados, puntosTerminados, capacidadDelEquipo, tiempoNoEfectivo)
+        ValidacionDeEstadisticas.ValideEstadisticas(iteracion)
     End Sub
 
     <TestMethod()>
     Public Sub PuntosTerminadosPuedenSerCero()
-        puntosTerminados = 0
+        iteracion.PuntosTerminados = 0
 
-        ValidacionDeEstadisticas.ValideEstadisticas(puntosPlanificados, puntosTerminados, capacidadDelEquipo, tiempoNoEfectivo)
+        ValidacionDeEstadisticas.ValideEstadisticas(iteracion)
     End Sub
 
     <TestMethod(), ExpectedException(GetType(ArgumentException))>
     Public Sub PuntosTerminadosTieneUnMaximoDe100Puntos()
-        puntosTerminados = 101
+        iteracion.PuntosTerminados = 101
 
-        ValidacionDeEstadisticas.ValideEstadisticas(puntosPlanificados, puntosTerminados, capacidadDelEquipo, tiempoNoEfectivo)
+        ValidacionDeEstadisticas.ValideEstadisticas(iteracion)
     End Sub
 
     <TestMethod()>
     Public Sub PuntosTerminadosPuedenSerElMáximoPermitido()
-        puntosTerminados = 100
+        iteracion.PuntosTerminados = 100
 
-        ValidacionDeEstadisticas.ValideEstadisticas(puntosPlanificados, puntosTerminados, capacidadDelEquipo, tiempoNoEfectivo)
+        ValidacionDeEstadisticas.ValideEstadisticas(iteracion)
     End Sub
 
     <TestMethod(), ExpectedException(GetType(ArgumentException))>
     Public Sub CapacidadDelEquipoNoDebenSerNegativa()
-        capacidadDelEquipo = -0.01
+        iteracion.CapacidadDelEquipo = -0.01
 
-        ValidacionDeEstadisticas.ValideEstadisticas(puntosPlanificados, puntosTerminados, capacidadDelEquipo, tiempoNoEfectivo)
+        ValidacionDeEstadisticas.ValideEstadisticas(iteracion)
     End Sub
 
     <TestMethod()>
     Public Sub CapacidadDelEquipoPuedeSerCero()
-        capacidadDelEquipo = 0
-        tiempoNoEfectivo = 0
+        iteracion.CapacidadDelEquipo = 0
+        iteracion.TiempoNoEfectivo = 0
 
-        ValidacionDeEstadisticas.ValideEstadisticas(puntosPlanificados, puntosTerminados, capacidadDelEquipo, tiempoNoEfectivo)
+        ValidacionDeEstadisticas.ValideEstadisticas(iteracion)
     End Sub
 
     <TestMethod(), ExpectedException(GetType(ArgumentException))>
     Public Sub CapacidadDelEquipoTieneUnMaximoDe1000Dias()
-        capacidadDelEquipo = 1000.01
+        iteracion.CapacidadDelEquipo = 1000.01
 
-        ValidacionDeEstadisticas.ValideEstadisticas(puntosPlanificados, puntosTerminados, capacidadDelEquipo, tiempoNoEfectivo)
+        ValidacionDeEstadisticas.ValideEstadisticas(iteracion)
     End Sub
 
     <TestMethod()>
     Public Sub CapacidadDelEquipoPuedeSerElMáximoPermitido()
-        capacidadDelEquipo = 1000
+        iteracion.CapacidadDelEquipo = 1000
 
-        ValidacionDeEstadisticas.ValideEstadisticas(puntosPlanificados, puntosTerminados, capacidadDelEquipo, tiempoNoEfectivo)
+        ValidacionDeEstadisticas.ValideEstadisticas(iteracion)
     End Sub
 
     <TestMethod(), ExpectedException(GetType(ArgumentException))>
     Public Sub TiempoNoEfectivoNoDebenSerNegativa()
-        tiempoNoEfectivo = -0.01
+        iteracion.TiempoNoEfectivo = -0.01
 
-        ValidacionDeEstadisticas.ValideEstadisticas(puntosPlanificados, puntosTerminados, capacidadDelEquipo, tiempoNoEfectivo)
+        ValidacionDeEstadisticas.ValideEstadisticas(iteracion)
     End Sub
 
     <TestMethod()>
     Public Sub TiempoNoEfectivoPuedeSerCero()
-        tiempoNoEfectivo = 0
+        iteracion.TiempoNoEfectivo = 0
 
-        ValidacionDeEstadisticas.ValideEstadisticas(puntosPlanificados, puntosTerminados, capacidadDelEquipo, tiempoNoEfectivo)
+        ValidacionDeEstadisticas.ValideEstadisticas(iteracion)
     End Sub
 
     <TestMethod(), ExpectedException(GetType(ArgumentException))>
     Public Sub TiempoNoEfectivoNoPuedeSerMayorALaCapacidadDelEquipo()
-        tiempoNoEfectivo = 100.01
+        iteracion.TiempoNoEfectivo = 100.01
 
-        ValidacionDeEstadisticas.ValideEstadisticas(puntosPlanificados, puntosTerminados, capacidadDelEquipo, tiempoNoEfectivo)
+        ValidacionDeEstadisticas.ValideEstadisticas(iteracion)
     End Sub
 
     <TestMethod()>
     Public Sub TiempoNoEfectivoPuedeSerIgualALaCapacidad()
-        tiempoNoEfectivo = 100
+        iteracion.TiempoNoEfectivo = 100
 
-        ValidacionDeEstadisticas.ValideEstadisticas(puntosPlanificados, puntosTerminados, capacidadDelEquipo, tiempoNoEfectivo)
+        ValidacionDeEstadisticas.ValideEstadisticas(iteracion)
     End Sub
 End Class

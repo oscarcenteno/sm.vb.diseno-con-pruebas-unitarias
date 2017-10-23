@@ -1,7 +1,7 @@
 ﻿<TestClass()> Public Class CalculeElValorDeMercadoTests
 
     <TestMethod()>
-    Public Sub Calculo()
+    Public Sub CalculaElValorDeMercado()
         Dim esperado As Decimal = 2862400
 
         Dim montoNominalDelSaldo As Decimal = 3578000

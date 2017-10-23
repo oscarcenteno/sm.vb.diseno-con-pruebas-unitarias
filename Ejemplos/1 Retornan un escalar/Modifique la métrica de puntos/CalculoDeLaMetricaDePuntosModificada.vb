@@ -1,11 +1,11 @@
 ﻿Public Class CalculoDeLaMetricaDePuntosModificada
-    Public Shared Function CalculeLaMetricaDePuntos(puntosPlanificados As Decimal, puntosTerminados As Decimal, hayInformacionDePuntosDisponible As Boolean) As String
-        If hayInformacionDePuntosDisponible Then
-            If puntosPlanificados > 0 Then
-                Dim metrica As Decimal = Decimal.Round(puntosTerminados / puntosPlanificados, 2) * 100
-                Dim metricaSinDecimales As Integer = Decimal.Truncate(metrica)
+    Public Shared Function CalculeLaMetricaDePuntos(iteracion As Iteracion) As String
+        If iteracion.HayInformacionDePuntosDisponible Then
+            If iteracion.PuntosPlanificados > 0 Then
+                Dim metricaRedondeadaConDosDecimales As Decimal = Decimal.Round(iteracion.PuntosTerminados / iteracion.PuntosPlanificados, 2) * 100
+                Dim metricaSinDecimales As Integer = Decimal.Truncate(metricaRedondeadaConDosDecimales)
 
-                Return $"{metricaSinDecimales}% {puntosTerminados}|{puntosPlanificados}"
+                Return $"{metricaSinDecimales}% {iteracion.PuntosTerminados}|{iteracion.PuntosPlanificados}"
             Else
                 Return "No hay métrica"
             End If
