@@ -5,13 +5,13 @@
     Dim obtenido As String
 
     <TestMethod()> Public Sub SeCalculaLaMetrica()
-        esperado = "95%"
+        Dim esperado As String = "95%"
 
-        iteracion = New Iteracion
+        Dim iteracion As New Iteracion
         iteracion.PuntosPlanificados = 100
         iteracion.PuntosTerminados = 95
         iteracion.HayInformacionDePuntosDisponible = True
-        obtenido = CalculoDeLaMetricaDePuntos.CalculeLaMetricaDePuntos(iteracion)
+        Dim obtenido As String = CalculoDeLaMetricaDePuntos.CalculeLaMetricaDePuntos(iteracion)
 
         Assert.AreEqual(esperado, obtenido)
     End Sub

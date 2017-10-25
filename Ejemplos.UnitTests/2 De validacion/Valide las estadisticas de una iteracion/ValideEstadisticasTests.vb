@@ -14,20 +14,6 @@ Public Class ValideEstadisticasTests
         iteracion.DiasNoEfectivos = 20
     End Sub
 
-    <TestMethod()>
-    Public Sub TodosSonValidos()
-        ValidacionDeEstadisticas.ValideEstadisticas(Iteracion)
-    End Sub
-
-    <TestMethod()>
-    Public Sub SiNoHayInformacionDePuntosDisponibleNoSeValidan()
-        iteracion.HayInformacionDePuntosDisponible = False
-        iteracion.PuntosPlanificados = -1
-        iteracion.PuntosTerminados = -1
-
-        ValidacionDeEstadisticas.ValideEstadisticas(iteracion)
-    End Sub
-
     <TestMethod(), ExpectedException(GetType(ArgumentException))>
     Public Sub PuntosPlanificadosNoDebenSerNegativos()
         iteracion.PuntosPlanificados = -1

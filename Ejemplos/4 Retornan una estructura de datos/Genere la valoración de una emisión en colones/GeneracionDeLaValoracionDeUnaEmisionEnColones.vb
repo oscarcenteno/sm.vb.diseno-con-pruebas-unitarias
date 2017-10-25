@@ -1,6 +1,8 @@
 ﻿Public Class GeneracionDeLaValoracionDeUnaEmisionEnColones
 
-    Public Shared Function GenereLaValoracion(fechaActual As Date, informacionOficial As InformacionOficial, emision As Emision) As Valoracion
+    Public Shared Function GenereLaValoracion(fechaActual As Date,
+                                              informacionOficial As InformacionOficial,
+                                              emision As Emision) As Valoracion
         Dim valoracion As New Valoracion
         valoracion.ISIN = emision.ISIN
 
