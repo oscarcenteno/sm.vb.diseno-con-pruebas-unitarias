@@ -7,9 +7,10 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Ejemplos", "Ejemplos\Ejempl
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Ejemplos.UnitTests", "Ejemplos.UnitTests\Ejemplos.UnitTests.vbproj", "{8074F4F2-FA08-4F10-8BDA-CB587449FDFC}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Especificaciones", "Especificaciones", "{6A407CBA-077A-48B3-9C64-05728BDEDEF3}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Materiales", "Materiales", "{6A407CBA-077A-48B3-9C64-05728BDEDEF3}"
 	ProjectSection(SolutionItems) = preProject
-		Especificaciones.xlsx = Especificaciones.xlsx
+		Materiales\Especificaciones.xlsx = Materiales\Especificaciones.xlsx
+		Materiales\Manual del Curso - 1era parte.pdf = Materiales\Manual del Curso - 1era parte.pdf
 	EndProjectSection
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "FacilDeProbar", "Facil de probar\FacilDeProbar.vbproj", "{489D95AE-CC73-49F8-88CE-4B6C86DC4F13}"
