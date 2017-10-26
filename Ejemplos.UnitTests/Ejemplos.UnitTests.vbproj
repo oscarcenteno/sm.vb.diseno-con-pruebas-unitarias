@@ -87,7 +87,6 @@
     <Compile Include="1 Retornan un escalar\Cálculo del porcentaje de cobertura revisado\CalculeElPorcentajeDeCoberturaRevisadoTests.vb" />
     <Compile Include="1 Retornan un escalar\Cálculo del valor de mercado\CalculeElValorDeMercadoTests.vb" />
     <Compile Include="1 Retornan un escalar\Genere la métrica de tiempo no efectivo\GenereElTiempoNoEfectivoTests.vb" />
-    <Compile Include="1 Retornan un escalar\Modifique la métrica de puntos\CalculeLaMetricaDePuntosModificadaTests.vb" />
     <Compile Include="2 De validacion\Valide las estadisticas de una iteracion\ValideEstadisticasTests.vb" />
     <Compile Include="2 De validacion\Valide los datos de una iteración\ValideLaIteracionTests.vb" />
     <Compile Include="3 Retornan una lista de escalares\Genere la lista de métricas de puntos\GenereLaListaDeMetricasDePuntosTests.vb" />

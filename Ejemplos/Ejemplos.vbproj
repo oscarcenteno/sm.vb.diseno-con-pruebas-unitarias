@@ -68,7 +68,6 @@
     <Compile Include="1 Retornan un escalar\Cálculo del aporte de garantia\CalculoDelAporteDeGarantia.vb" />
     <Compile Include="1 Retornan un escalar\Cálculo del valor de mercado\CalculoDelValorDeMercado.vb" />
     <Compile Include="1 Retornan un escalar\Genere la métrica de tiempo no efectivo\GeneracionDelTiempoNoEfectivo.vb" />
-    <Compile Include="1 Retornan un escalar\Modifique la métrica de puntos\CalculoDeLaMetricaDePuntosModificada.vb" />
     <Compile Include="2 De validacion\Valide los datos de una iteración\RangoDeFechas.vb" />
     <Compile Include="2 De validacion\Valide los datos de una iteración\ValidacionDeIteracion.vb" />
     <Compile Include="2 De validacion\Valide las estadisticas de una iteracion\ValidacionDeEstadisticas.vb" />
