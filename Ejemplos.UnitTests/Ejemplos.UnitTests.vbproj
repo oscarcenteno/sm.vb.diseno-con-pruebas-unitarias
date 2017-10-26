@@ -48,10 +48,6 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -100,7 +96,6 @@
     <Compile Include="4 Retornan una estructura de datos\Genere las métricas de una iteración\GenereLasMetricasDeLaIteracionTests.vb" />
     <Compile Include="5 Retornan una lista de estructuras de datos\Genere la valoración de las emisiones en colones\GenereLaValoracionDeLasEmisionesEnColonesTests.vb" />
     <Compile Include="5 Retornan una lista de estructuras de datos\Genere las métricas de todas las iteraciones del proyecto\GenereLasMetricasDeLasIteracionesTests.vb" />
-    <Compile Include="JsonAssert.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -135,7 +130,6 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Ejemplos\Ejemplos.vbproj">

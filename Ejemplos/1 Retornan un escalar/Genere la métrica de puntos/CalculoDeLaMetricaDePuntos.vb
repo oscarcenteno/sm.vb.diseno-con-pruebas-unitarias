@@ -1,4 +1,6 @@
-﻿Public Class CalculoDeLaMetricaDePuntos
+﻿Imports System.Globalization
+
+Public Class CalculoDeLaMetricaDePuntos
     Public Shared Function CalculeLaMetricaDePuntos(iteracion As Iteracion) As String
         If iteracion.HayInformacionDePuntosDisponible Then
             If iteracion.PuntosPlanificados > 0 Then
@@ -7,7 +9,7 @@
                 Dim metricaEnPorcentaje As Decimal = metricaRedondeadaConDosDecimales * 100
                 Dim metricaSinDecimales As Integer = Decimal.Truncate(metricaEnPorcentaje)
 
-                Return $"{metricaSinDecimales}%"
+                Return metricaSinDecimales.ToString("G", New CultureInfo("en-US")) + "%"
             Else
                 Return "No hay métrica"
             End If

@@ -1,6 +1,11 @@
 ﻿Public Class ValidacionDeEstadisticas
     Public Shared Sub ValideEstadisticas(iteracion As Iteracion)
+        ValidePuntos(iteracion)
 
+        ValideCapacidad(iteracion)
+    End Sub
+
+    Private Shared Sub ValidePuntos(iteracion As Iteracion)
         If iteracion.HayInformacionDePuntosDisponible Then
             If iteracion.PuntosPlanificados < 0 Then
                 Throw New ArgumentException("Puntos planificados debe ser un número entero positivo")
@@ -18,7 +23,9 @@
                 Throw New ArgumentException("Puntos terminados tiene un maximo de 100 puntos")
             End If
         End If
+    End Sub
 
+    Private Shared Sub ValideCapacidad(iteracion As Iteracion)
         If iteracion.HayInformacionDeDiasDisponible Then
             If iteracion.CapacidadDelEquipo < 0 Then
                 Throw New ArgumentException("Capacidad del equipo debe ser un número positivo")

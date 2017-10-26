@@ -14,7 +14,7 @@
         emision = ObtengaLaEmision()
         obtenido = GeneracionDeLaValoracionDeUnaEmisionEnColones.GenereLaValoracion(fechaActual, InformacionOficial, emision)
 
-        JsonAssert.AreEqual(esperado, obtenido)
+        Assert.AreEqual(esperado, obtenido)
     End Sub
 
     Private Shared Function ObtengaLaEmision() As Emision
@@ -38,9 +38,9 @@
     Private Shared Function ObtengaLaValoracionEsperada() As Valoracion
         Dim esperado As New Valoracion
         esperado.ISIN = "HDA000000000001"
-        esperado.PorcentajeDeCobertura = "0.8"
-        esperado.ValorDeMercado = "2862400.0"
-        esperado.AporteDeGarantia = "2289920.00" ' Esto permite una comparación exacta al convertir a JSON
+        esperado.PorcentajeDeCobertura = 0.8
+        esperado.ValorDeMercado = 2862400
+        esperado.AporteDeGarantia = 2289920 ' Esto permite una comparación exacta al convertir a JSON
 
         Return esperado
     End Function

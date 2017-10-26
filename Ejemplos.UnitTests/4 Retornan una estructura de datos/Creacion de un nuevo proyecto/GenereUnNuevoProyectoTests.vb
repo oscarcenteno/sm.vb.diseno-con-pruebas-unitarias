@@ -15,6 +15,6 @@
         Dim fechaDeInicio As Date = New Date(2018, 10, 26)
         obtenido = CreacionDeUnNuevoProyecto.GenereUnNuevoProyecto(fechaActual, nombre, fechaDeInicio)
 
-        JsonAssert.AreEqual(esperado, obtenido)
+        Assert.AreEqual(esperado, obtenido)
     End Sub
 End Class

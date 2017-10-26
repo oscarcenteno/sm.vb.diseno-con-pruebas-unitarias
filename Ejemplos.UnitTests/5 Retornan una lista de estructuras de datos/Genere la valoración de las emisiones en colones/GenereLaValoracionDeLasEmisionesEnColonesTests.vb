@@ -14,22 +14,22 @@
         InicialiceLasEmisiones()
         obtenido = GeneracionDeLaValoracionDeLasEmisionesEnColones.GenereLaValoracionDeLasEmisionesEnColones(fechaActual, informacionOficial, emisiones)
 
-        JsonAssert.AreEqual(esperado, obtenido)
+        CollectionAssert.AreEqual(esperado, obtenido)
 
     End Sub
 
     Private Sub InicialiceLasValoracionesEsperadas()
         esperado = New List(Of Valoracion)
-        esperado.Add(New Valoracion With {.ISIN = "HDA000000000001", .PorcentajeDeCobertura = 0.8, .ValorDeMercado = "2862400.0", .AporteDeGarantia = "2289920.00"})
-        esperado.Add(New Valoracion With {.ISIN = "HDA000000000002", .PorcentajeDeCobertura = 0, .ValorDeMercado = " 36624000.0", .AporteDeGarantia = "0"})
-        esperado.Add(New Valoracion With {.ISIN = "HDA000000000003", .PorcentajeDeCobertura = 0, .ValorDeMercado = " 52608000.0", .AporteDeGarantia = "0"})
+        esperado.Add(New Valoracion With {.ISIN = "HDA000000000001", .PorcentajeDeCobertura = 0.8, .ValorDeMercado = 2862400, .AporteDeGarantia = 2289920})
+        esperado.Add(New Valoracion With {.ISIN = "HDA000000000002", .PorcentajeDeCobertura = 0, .ValorDeMercado = 36624000, .AporteDeGarantia = 0})
+        esperado.Add(New Valoracion With {.ISIN = "HDA000000000003", .PorcentajeDeCobertura = 0, .ValorDeMercado = 52608000, .AporteDeGarantia = 0})
     End Sub
 
     Private Sub InicialiceLasEmisiones()
         emisiones = New List(Of Emision)
-        emisiones.Add(New Emision With {.ISIN = "HDA000000000001", .MontoNominalDelSaldo = 3578000.0})
-        emisiones.Add(New Emision With {.ISIN = "HDA000000000002", .MontoNominalDelSaldo = 4578000.0})
-        emisiones.Add(New Emision With {.ISIN = "HDA000000000003", .MontoNominalDelSaldo = 6576000.0})
+        emisiones.Add(New Emision With {.ISIN = "HDA000000000001", .MontoNominalDelSaldo = 3578000})
+        emisiones.Add(New Emision With {.ISIN = "HDA000000000002", .MontoNominalDelSaldo = 4578000})
+        emisiones.Add(New Emision With {.ISIN = "HDA000000000003", .MontoNominalDelSaldo = 6576000})
     End Sub
 
     Private Sub InicialiceLaInformacionOficial()

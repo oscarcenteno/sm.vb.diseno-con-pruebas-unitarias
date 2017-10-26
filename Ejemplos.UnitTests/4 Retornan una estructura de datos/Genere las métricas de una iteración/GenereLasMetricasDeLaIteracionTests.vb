@@ -21,6 +21,6 @@
         Dim obtenido As MetricasDeIteracion
         obtenido = GeneracionDeMetricasDeIteracion.GenereLasMetricasDeLaIteracion(iteracion)
 
-        JsonAssert.AreEqual(esperado, obtenido)
+        Assert.AreEqual(esperado, obtenido)
     End Sub
 End Class

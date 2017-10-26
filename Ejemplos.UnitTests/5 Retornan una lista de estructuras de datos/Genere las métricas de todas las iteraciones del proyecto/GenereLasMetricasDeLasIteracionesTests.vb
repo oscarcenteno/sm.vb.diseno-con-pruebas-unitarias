@@ -34,7 +34,7 @@
 
         obtenido = GeneracionDeMetricasDeLasIteraciones.GenereLasMetricasDeLasIteraciones(iteraciones)
 
-        JsonAssert.AreEqual(esperado, obtenido)
+        CollectionAssert.AreEqual(esperado, obtenido)
     End Sub
 
     Private Sub AgregueMetricasDeIteracionEsperada(iteracion As Integer, fechaInicial As Date, fechaFinal As Date, metricaDePuntos As String, metricaDeTiempoNoEfectivo As String)
