@@ -5,7 +5,7 @@
         esperado.Iteracion = 1
         esperado.FechaInicial = New Date(2017, 10, 16)
         esperado.FechaFinal = New Date(2017, 10, 20)
-        esperado.MetricaDePuntos = "95% 95|100"
+        esperado.MetricaDePuntos = "95%"
         esperado.MetricaDeTiempoNoEfectivo = "5%"
 
         Dim iteracion As New Iteracion

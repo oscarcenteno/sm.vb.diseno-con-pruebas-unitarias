@@ -28,7 +28,7 @@
 
     <TestMethod()> Public Sub GeneraLasMetricas()
         esperado = New List(Of MetricasDeIteracion)
-        AgregueMetricasDeIteracionEsperada(1, New Date(2017, 10, 16), New Date(2017, 10, 20), "80% 8|10", "5%")
+        AgregueMetricasDeIteracionEsperada(1, New Date(2017, 10, 16), New Date(2017, 10, 20), "80%", "5%")
         AgregueMetricasDeIteracionEsperada(2, New Date(2017, 10, 23), New Date(2017, 10, 27), "No hay datos", "29%")
         AgregueMetricasDeIteracionEsperada(3, New Date(2017, 10, 30), New Date(2017, 11, 3), "No hay datos", "No hay datos")
 
