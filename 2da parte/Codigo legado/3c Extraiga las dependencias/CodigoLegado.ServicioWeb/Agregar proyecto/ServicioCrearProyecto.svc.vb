@@ -34,7 +34,7 @@ Public Class ServicioCrearProyecto
         Catch exception As ArgumentException
             Throw GeneracionDeErrorDeValidacion.GenereElError(exception, fechaActual)
         Catch exception As Exception
-            Throw GeneracionDeErrorInesperado.GenereElError(exception, fechaActual)
+            Throw New FaultException("Error inesperado")
         End Try
     End Function
 End Class
