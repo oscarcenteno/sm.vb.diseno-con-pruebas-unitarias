@@ -2,6 +2,7 @@
 Imports Ejemplos
 Imports Ejemplos.UnitTests
 Imports NSubstitute
+Imports ServicioWeb.MuestraLasMetricasDeUnProyecto
 
 <TestClass()> Public Class ConsulteLasMetricasDelProyectoTests
     Dim esperado As ReporteDeMetricas
