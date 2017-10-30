@@ -82,7 +82,10 @@
     <Import Include="Microsoft.VisualStudio.TestTools.UnitTesting" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Muestre las métricas de un proyecto\Parametros.vb" />
+    <Compile Include="Muestre las métricas de un proyecto\Genere el reporte de las métricas del proyecto\GenereElReporteDeMetricasTests.vb" />
     <Compile Include="Muestre las métricas de un proyecto\Genere la métrica de puntos\CalculeLaMetricaDePuntosTests.vb" />
+    <Compile Include="Muestre las métricas de un proyecto\ResultadosEsperados.vb" />
     <Compile Include="Valoración de las emisiones en colones\Cálculo del aporte de garantía\CalculeElAporteDeGarantiaTests.vb" />
     <Compile Include="Valoración de las emisiones en colones\Cálculo del porcentaje de cobertura revisado\CalculeElPorcentajeDeCoberturaRevisadoTests.vb" />
     <Compile Include="Valoración de las emisiones en colones\Cálculo del valor de mercado\CalculeElValorDeMercadoTests.vb" />
