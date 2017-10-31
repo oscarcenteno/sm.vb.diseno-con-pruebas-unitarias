@@ -97,7 +97,22 @@
     <Import Include="Microsoft.VisualStudio.TestTools.UnitTesting" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Agregar iteracion\Logica de negocio\Valide las estadisticas de una iteracion\ValideEstadisticasTests.vb" />
+    <Compile Include="Agregar iteracion\Logica de negocio\Valide los datos de una iteración\ValideLaIteracionTests.vb" />
+    <Compile Include="Agregar proyecto\AgregueUnProyectoTests.vb" />
+    <Compile Include="Agregar proyecto\Logica de negocio\Genere el proyecto por crear\GenereElProyectoPorCrearTests.vb" />
+    <Compile Include="Agregar proyecto\Logica de negocio\Valide el nuevo proyecto\ValideElNuevoProyectoTests.vb" />
+    <Compile Include="Agregar proyecto\Salidas\ProyectoCreado\EqualsTests.vb" />
     <Compile Include="Muestre las métricas de un proyecto\ConsulteLasMetricasDelProyectoTests.vb" />
+    <Compile Include="Muestre las métricas de un proyecto\Logica de negocio\Genere el reporte de las métricas\GenereElReporteDeMetricasTests.vb" />
+    <Compile Include="Muestre las métricas de un proyecto\Logica de negocio\Genere la métrica de puntos\CalculeLaMetricaDePuntosTests.vb" />
+    <Compile Include="Muestre las métricas de un proyecto\Logica de negocio\Genere la métrica de tiempo no efectivo\GenereElTiempoNoEfectivoTests.vb" />
+    <Compile Include="Muestre las métricas de un proyecto\Logica de negocio\Genere las métricas de todas las iteraciones\GenereLasMetricasDeLasIteracionesTests.vb" />
+    <Compile Include="Muestre las métricas de un proyecto\Logica de negocio\Genere las métricas de una iteración\GenereLasMetricasDeLaIteracionTests.vb" />
+    <Compile Include="Muestre las métricas de un proyecto\Parametros.vb" />
+    <Compile Include="Muestre las métricas de un proyecto\ResultadosEsperados.vb" />
+    <Compile Include="Muestre las métricas de un proyecto\Salidas\MetricasDeIteracion\EqualsTests.vb" />
+    <Compile Include="Muestre las métricas de un proyecto\Salidas\ReporteDeMetricas\EqualsTests.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -113,6 +128,11 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Valoración de las emisiones en colones\Cálculo del aporte de garantía\CalculeElAporteDeGarantiaTests.vb" />
+    <Compile Include="Valoración de las emisiones en colones\Cálculo del porcentaje de cobertura revisado\CalculeElPorcentajeDeCoberturaRevisadoTests.vb" />
+    <Compile Include="Valoración de las emisiones en colones\Cálculo del valor de mercado\CalculeElValorDeMercadoTests.vb" />
+    <Compile Include="Valoración de las emisiones en colones\Genere la valoración de las emisiones\GenereLaValoracionDeLasEmisionesEnColonesTests.vb" />
+    <Compile Include="Valoración de las emisiones en colones\Genere la valoración de una emisión en colones\GenereLaValoracionTests.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -135,19 +155,12 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Ejemplos.UnitTests\Ejemplos.UnitTests.vbproj">
-      <Project>{8074f4f2-fa08-4f10-8bda-cb587449fdfc}</Project>
-      <Name>Ejemplos.UnitTests</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Ejemplos\Ejemplos.vbproj">
-      <Project>{2030665E-234E-434C-A591-F2DD3477B68D}</Project>
-      <Name>Ejemplos</Name>
-    </ProjectReference>
     <ProjectReference Include="..\ServicioWeb\ServicioWeb.vbproj">
       <Project>{5f7309c3-6061-4395-9d61-8cf4490f1c25}</Project>
       <Name>ServicioWeb</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

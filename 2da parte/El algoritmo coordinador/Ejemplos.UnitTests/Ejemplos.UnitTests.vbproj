@@ -82,21 +82,6 @@
     <Import Include="Microsoft.VisualStudio.TestTools.UnitTesting" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Muestre las métricas de un proyecto\Parametros.vb" />
-    <Compile Include="Muestre las métricas de un proyecto\Genere el reporte de las métricas del proyecto\GenereElReporteDeMetricasTests.vb" />
-    <Compile Include="Muestre las métricas de un proyecto\Genere la métrica de puntos\CalculeLaMetricaDePuntosTests.vb" />
-    <Compile Include="Muestre las métricas de un proyecto\ResultadosEsperados.vb" />
-    <Compile Include="Valoración de las emisiones en colones\Cálculo del aporte de garantía\CalculeElAporteDeGarantiaTests.vb" />
-    <Compile Include="Valoración de las emisiones en colones\Cálculo del porcentaje de cobertura revisado\CalculeElPorcentajeDeCoberturaRevisadoTests.vb" />
-    <Compile Include="Valoración de las emisiones en colones\Cálculo del valor de mercado\CalculeElValorDeMercadoTests.vb" />
-    <Compile Include="Muestre las métricas de un proyecto\Genere la métrica de tiempo no efectivo\GenereElTiempoNoEfectivoTests.vb" />
-    <Compile Include="Agregar iteracion\Valide las estadisticas de una iteracion\ValideEstadisticasTests.vb" />
-    <Compile Include="Agregar iteracion\Valide los datos de una iteración\ValideLaIteracionTests.vb" />
-    <Compile Include="Agregar proyecto\Creacion de un nuevo proyecto\GenereUnNuevoProyectoTests.vb" />
-    <Compile Include="Valoración de las emisiones en colones\Genere la valoración de una emisión en colones\GenereLaValoracionTests.vb" />
-    <Compile Include="Muestre las métricas de un proyecto\Genere las métricas de una iteración\GenereLasMetricasDeLaIteracionTests.vb" />
-    <Compile Include="Valoración de las emisiones en colones\Genere la valoración de las emisiones\GenereLaValoracionDeLasEmisionesEnColonesTests.vb" />
-    <Compile Include="Muestre las métricas de un proyecto\Genere las métricas de todas las iteraciones\GenereLasMetricasDeLasIteracionesTests.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -131,12 +116,6 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Ejemplos\Ejemplos.vbproj">
-      <Project>{2030665e-234e-434c-a591-f2dd3477b68d}</Project>
-      <Name>Ejemplos</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup />
   <Choose>

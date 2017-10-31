@@ -1,7 +1,6 @@
 ﻿Namespace AgregarProyecto
     Public Class Validacion
         Public Shared Sub ValideElNuevoProyecto(nuevoProyecto As NuevoProyecto, proyectosExistentes As List(Of String))
-            ' Algoritmo de validacion
             If nuevoProyecto Is Nothing Then
                 Throw New ArgumentException("Se requiere indicar la información del nuevo proyecto")
             End If

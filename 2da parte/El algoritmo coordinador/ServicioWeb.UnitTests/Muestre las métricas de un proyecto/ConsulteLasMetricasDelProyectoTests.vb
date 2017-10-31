@@ -1,13 +1,11 @@
 ﻿Imports System.ServiceModel
-Imports Ejemplos
-Imports Ejemplos.UnitTests
 Imports NSubstitute
 Imports ServicioWeb.MuestraLasMetricasDeUnProyecto
 
 <TestClass()> Public Class ConsulteLasMetricasDelProyectoTests
     Dim esperado As ReporteDeMetricas
     Dim dependencias As Dependencias
-    Dim servicio As ServicioConsulteLasMetricas
+    Dim servicio As ServicioConsulteLasMetricasDelProyecto
     Dim obtenido As ReporteDeMetricas
 
     <TestMethod()> Public Sub RetornaElReporteDeMetricasGenerado()
@@ -15,7 +13,7 @@ Imports ServicioWeb.MuestraLasMetricasDeUnProyecto
 
         dependencias = Substitute.For(Of Dependencias)
         dependencias.ObtengaElProyecto(1).Returns(Parametros.ObtengaElProyecto())
-        servicio = New ServicioConsulteLasMetricas(dependencias)
+        servicio = New ServicioConsulteLasMetricasDelProyecto(dependencias)
         obtenido = servicio.ConsulteLasMetricasDelProyecto(1)
 
         Assert.AreEqual(esperado, obtenido)
@@ -26,7 +24,7 @@ Imports ServicioWeb.MuestraLasMetricasDeUnProyecto
         dependencias = Substitute.For(Of Dependencias)
         dependencias.ObtengaElProyecto(2).Returns(Function(c) Nothing)
         dependencias.ObtengaLaFechaActual.Returns(New Date(2017, 11, 20))
-        servicio = New ServicioConsulteLasMetricas(dependencias)
+        servicio = New ServicioConsulteLasMetricasDelProyecto(dependencias)
         servicio.ConsulteLasMetricasDelProyecto(2)
     End Sub
 
@@ -36,7 +34,7 @@ Imports ServicioWeb.MuestraLasMetricasDeUnProyecto
         dependencias.
             When(Function(c) c.ObtengaElProyecto(2)).
             Do(Sub(c) Throw New Exception())
-        servicio = New ServicioConsulteLasMetricas(dependencias)
+        servicio = New ServicioConsulteLasMetricasDelProyecto(dependencias)
         servicio.ConsulteLasMetricasDelProyecto(2)
     End Sub
 End Class
